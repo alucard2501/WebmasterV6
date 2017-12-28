@@ -1,0 +1,39 @@
+﻿.custom-FileSelector{ position:relative; display:inline-block;}
+.custom-FileSelector-button{ top:0; right:0; padding:0; position:absolute; display:block; text-align:center;}
+.custom-FileSelector-list{ top:0; left:0; padding:0; background:#ffffff; border:1px solid #c5c5c5; color:#323232; font-size:12px; border-radius:2px; 
+                           outline:none; box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute; overflow-y:auto; overflow-x:hidden;}
+.custom-FileSelector-list li{ padding:0 7px; font-size:12px;}
+
+#Div_Tab1{ height:400px; font:normal 13px 微软雅黑; overflow:hidden;}
+#Div_Tab2{ height:400px; font:normal 13px 微软雅黑; overflow-y:scroll;}
+.divFileSelectorLeft{ width:79%; float:left;}
+.ulFileSelector{ height:320px; margin-top:10px; overflow:hidden;}
+.ulFileSelector li{ width:47%; margin:2px 1% 0 0; padding:1%; background:#DFDFDF; overflow:hidden; float:left; position:relative; cursor:pointer;}
+.ulFileSelector li:hover{ background:#f8b801;}
+.fileFileSelector{ width:100%;}
+.divFileSelectorClick{ width:98%; height:30px; top:0; left:0; background: url(../images/jquery_plupload/done.gif) no-repeat right 7px; position: absolute;}
+
+.selectFileSelector, .textFileSelector{ width:120px; margin-left:2px; padding:0px 4px; background: #ffffff; border:1px solid #c5c5c5; color:#323232; border-radius:2px; 
+                    font:0.9em 微软雅黑; outline:none;}
+.selectFileSelector{ height:21px;}
+.textFileSelector{ height:19px;}
+
+.divFileSelecotrPage{ width:95%; margin-top:20px; text-align:center; display:block;}
+.divFileSelecotrPage ul li{ margin:0; display:inline; list-style:none;}
+.divFileSelecotrPage a.btnPage{ margin:4px 1px; padding:5px 9px; background:#f0f0f0; border:1px solid #cccccc; color:#545454; border-radius:4px; text-align:center; 
+                    font:12px Arial; text-decoration:none;}
+.divFileSelecotrPage a.btnPageCurrent{ background-color:#323232; border-color:#323232; color:#ffffff;}
+.divFileSelecotrPage a.btnPageDisabled{ color:#d0d0d0; cursor:default;}
+
+.divFileSelectorRight{ width:20%; height:400px; background:#f0f0f0; border:solid 1px #d5d5d5; border-radius:2px; color:#545454; overflow:hidden; float:right;}
+.spanFileSelectorRight{ padding:6px 0; border-bottom:solid 1px #d5d5d5; text-align:center; display:block; cursor:default;}
+.spanFileSelectorRed{ color:#de7616; font-weight:bold;}
+.btnFileSelected{ width:32.5%; padding:6px 0; border-bottom:solid 1px #d5d5d5; border-left:solid 1px #d5d5d5; text-align:center; display:block; cursor:pointer; float:left;}
+.btnFileSelected1{ width:33%; border-left:0;}
+.divFileSelected{ width:100%; height:344px; background:#ffffff; overflow-y:scroll;}
+
+.divFileSelected ul{ padding:7px 0 5px 7px;}
+.divFileSelected ul li{ width:100px; margin:0 0 2px 0; border:solid 2px #ffffff; line-height:0;}
+.divFileSelected ul li img{ width:100%; cursor:default;}
+
+#Div_FileUpload{ margin-top:10px;}

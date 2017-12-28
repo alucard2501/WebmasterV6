@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../common/css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_colorbox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_zyUpload.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_bsImgSelector.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_cleditor.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_plupload_queue.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+
+    <script type="text/javascript" src="../../common/js/jquery.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_colorbox.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_dataTables.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_zyFile.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_zyUpload.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsImgSelector.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_cleditor.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsTextboxAdvance.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsTextboxMenu.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_plupload.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_plupload_queue.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsPlupload.js"></script>
+
+    <script type="text/javascript" src="../../common/js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/header.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/my_function.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        init();
+
+        if (request("fromId")) {
+            $('#form1').attr('tablename', 't_email');
+            $('#form1').fillData(request("fromId"), 'FILL_DATA');
+        }
+
+        $('#form1').validateOnBlur();
+
+        $("#Btn_Save").click(function () {
+            $('#form1').attr('action', 'NHSCHOOL_SAVE_EMAIL');
+            $('#form1').saveData(saveSuccess2, saveError);
+        });
+
+        $("#Btn_Submit").click(function () {
+            $('#form1').attr('action', 'NHSCHOOL_SEND_EMAIL');
+            if ($('#form1').validate()) {
+                $('#form1').saveData(saveSuccess, saveError);
+            }
+        });
+    });
+    
+  //初始化
+    function init() {
+        $("#Text_sysUserIdsReceive").TextboxMenu({
+            SessionId: request("SessionId"),
+            DataGridId: 8,
+            ValueColumn: "sysUserId",
+            TextColumn: "name",
+            Width: 630,
+            Height: 28,
+            IsMult: true,
+        });
+
+        $("#Textarea_Conttent").cleditor({
+            width: 662,
+            height: 300,
+            left: 90,
+            top: 90,
+            position: "absolute",
+            controls: "bold italic underline strikethrough | font size " +
+                      "style | color highlight removeformat | bullets numbering | " +
+                      "alignleft center alignright justify | undo redo | " +
+                      "imgSelector link unlink | source"
+        });
+
+        $(".plupload").Plupload({
+            FileTypeId: 2,
+        	IsExcelImport:true,
+        	ExcelId:2,
+        	onUploadComplete:function(){
+        		if($("#Checkbox_AutoSend")[0].checked){
+        			//alert("ok1");
+        			$("#Btn_Submit").trigger("click");
+        		}
+        		
+        	}
+        });
+
+        //$("#left").height($("#header").height() + $("#main").height() + 70);
+    }
+
+    //执行保存后返回效果
+    function saveSuccess() {
+        alert("已发送");
+        location = "email.html?menuRootId=" + request("menuRootId") + "&tips=send&SessionId=" + request("SessionId");
+    }
+    function saveError(errorMessage) {
+        alert(errorMessage);
+    }
+
+    //执行存草稿后返回效果
+    function saveSuccess2() {
+        alert("已保存");
+        location = "email.html?menuRootId=" + request("menuRootId") + "&tips=draft&SessionId=" + request("SessionId");
+    }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridM">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">发邮件</span>
+                </div>
+                <div id="Div_Form" class="divForm">
+                    <form id="form1" method="post" action="" tablename="">
+                        <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+                        <div id="Div_FormControl">
+                            <label class="label0" style="left:35px; top:30px;">收&nbsp;件&nbsp;人</label><input id="Text_sysUserIdsReceive" type="text" class="text0 textboxMenu" data-validation="required" bindcolumn="sysUserIdsReceive" style="left:90px; top:30px;" />
+                            <label class="label0" style="left:35px; top:60px;">主&nbsp;&nbsp;&nbsp;&nbsp;题</label><input type="text" class="text0" data-validation="required" bindcolumn="title" style="left:90px; top:60px;" />
+                            <label class="label0" style="left:35px; top:90px;">正&nbsp;&nbsp;&nbsp;&nbsp;文</label><textarea id="Textarea_Conttent" class="text0" bindcolumn="content" iseditor="1"></textarea>
+                            <input class="plupload" type="text" bindcolumn="fileList" isplupload="1" />
+                        </div>
+                        <div class="divFormButton">
+                            <div class="divFormButtonRight">
+                                <input id="Btn_Save" type="button" class="btnMiddle btnGray" value="存草稿" />
+                                <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="发 送" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    
+
+    
+</script>

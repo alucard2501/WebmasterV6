@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/com/boatsoft/action/MyAction.java=UTF-8
+encoding//src/com/boatsoft/common/BasicFunction.java=UTF-8
+encoding//src/com/boatsoft/servlet/FileSelector.java=UTF-8
+encoding//src/com/boatsoft/servlet/PlUpload.java=UTF-8
+encoding//src/com/boatsoft/servlet/UploadServlet.java=UTF-8
+encoding//src/com/boatsoft/wxlib/util/ExcelUtil.java=UTF-8
+encoding//src/com/nhschool/action/NhschoolAction.java=UTF-8
+encoding/<project>=GBK

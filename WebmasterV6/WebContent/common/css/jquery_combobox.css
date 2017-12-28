@@ -1,0 +1,4 @@
+﻿.custom-combobox{ display:inline-block;}
+.custom-combobox-toggle{ top:0; bottom:0; margin-left:-1px; padding:0; position:absolute;}
+.custom-combobox-input{ margin:0; padding:0px 7px; background:#ffffff; border:1px solid #c5c5c5; color:#323232; font-weight:normal;
+                        font-size:12px; border-radius:2px; outline:none; box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute;}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../common/css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_ui.css" media="screen" />
+
+    <script type="text/javascript" src="../../common/js/jquery.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_dataTables.js"></script>
+
+    <script type="text/javascript" src="../../common/js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/header.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/my_function.js"></script>
+    <script type="text/javascript" src="../js/pages/email.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridL">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1"></span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Delete" class="toolbarDelete">删除</span></li>
+                            <li><span id="Tool_UnDelete" class="toolbarUnDelete">恢复</span></li>
+                            <li><span id="Tool_Read" class="toolbarRead">标记为已读</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh">刷新</span></li>
+                        </ul>
+                    </div>
+                    <table class="tableDatagrid">
+                        <thead>
+                            <tr>
+                                <th class="unsortable" style="width:20px;"><input id="Checkbox_All" type="checkbox" /></th>
+                                <th class="unsortable" style="width:40px;"></th>
+                                <th id="Th_SysUser" style="width:105px;">收件人</th>
+                                <th id="Th_Title">主题</th>
+                                <th id="Th_Date" style="width:105px;">时间</th>
+                                <th id="Th_Control" class="unsortable" style="width:28px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

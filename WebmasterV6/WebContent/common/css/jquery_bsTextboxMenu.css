@@ -1,0 +1,73 @@
+﻿.custom-TextboxMenu{ position:relative; display:inline-block;}
+.custom-TextboxMenu-toggle{ top:0; bottom:0; padding:0; position:absolute;}
+.custom-TextboxMenu-input{ margin:0; padding:0px 7px; background:#ffffff; border:1px solid #c5c5c5; color:#323232; font-weight:normal;
+                        font-size:12px; border-radius:2px; outline:none; box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute;}
+
+.custom-TextboxMenu-divMenu{ width:100%; overflow:hidden;}
+.custom-TextboxMenu-divMenuLeft{ width:50%; height:400px; overflow-y:scroll; float:left; background:#ffffff;}
+.custom-TextboxMenu-divMenuRight{ width:50%; height:400px; overflow-y:scroll; float:right; background:#efefef;}
+
+
+
+.custom-TextboxMenu-ulMenuLeft li a{ min-width:110px; height:32px; padding:0 10px 0 40px; color: #fdfdfd;
+	display: block;
+	position: relative; font: bold 12px/32px Arial, sans-serif;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+	background: #6c6e74; background: linear-gradient(top,  #6c6e74 0%,#4b4d51 100%); 
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);}
+.custom-TextboxMenu-ulMenuLeft > li:hover > a,
+.custom-TextboxMenu-ulMenuLeft > li:target > a,
+.custom-TextboxMenu-ulMenuLeft > li > a.active {
+	color: #3e5706;
+	text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+	background: #a5cd4e;
+	background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);	
+}
+.custom-TextboxMenu-ulMenuLeft > li > a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 24px;
+	height: 24px;
+	margin: 4px 8px;
+}
+
+.custom-TextboxMenu-subMenuLeft li a {
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	background: #e5e5e5;
+	border-bottom: 1px solid #c9c9c9;
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+}
+.custom-TextboxMenu-subMenuLeft li:hover a { background: #efefef; }
+.custom-TextboxMenu-subMenuLeft li:last-child a { border: none; }
+
+.custom-TextboxMenu-ulMenuLeft li > .custom-TextboxMenu-subMenuLeft {
+	display: none;
+}
+.custom-TextboxMenu-ulMenuLeft li:target > .custom-TextboxMenu-subMenuLeft {
+	display: block;
+}
+
+.custom-TextboxMenu-ulMenuRight li a{ min-width:110px; height:31px; padding:0 10px 0 40px; color: #fdfdfd;
+	display: block;
+	position: relative; font: bold 12px/32px Arial, sans-serif;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+	background: linear-gradient(top,  #6c6e74 0%,#4b4d51 100%); 
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	border-bottom: 1px solid #c9c9c9;
+
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);}
+.custom-TextboxMenu-ulMenuRight li:last-child a { border: none; }
+.custom-TextboxMenu-liMenuRight1{ background: #efefef;}
+.custom-TextboxMenu-liMenuRight2{ background: #d2d2d2;}
+.custom-TextboxMenu-liMenuRight2_down{background: #e1bf3e;}

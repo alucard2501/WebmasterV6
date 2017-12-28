@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_colorbox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_datetimepicker.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_combobox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_zyUpload.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_bsImgSelector.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_cleditor.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_plupload_queue.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_bsFileSelector.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_colorbox.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_datetimepicker.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_dataTables.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_combobox.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_zyFile.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_zyUpload.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_bsImgSelector.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_cleditor.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_bsTextboxAdvance.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_plupload.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_plupload_queue.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_bsFileSelector.js"></script>
+	<script type="text/javascript" src="../js/controls/jquery_bsPlupload.js"></script>
+	
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/order.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridCustom">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1"></span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Add" class="toolbarAdd" style="display:none;">新建</span></li>
+                            <li><span id="Tool_Edit" class="toolbarEdit" style="display:none;">修改</span></li>
+                            <li><span id="Tool_Delete" class="toolbarDelete" style="display:none;">删除</span></li>
+                            <li><span id="Tool_Stop" class="toolbarStop" style="display:none;">停用</span></li>
+                            <li><span id="Tool_Remove" class="toolbarRemove" style="display:none;">启用</span></li>
+                            <li><span id="Tool_Check" class="toolbarCheck" style="display:none;">审核</span></li>
+                            <li><span id="Tool_UnCheck" class="toolbarUnCheck" style="display:none;">反审</span></li>
+                            <li><span id="Tool_Setting" class="toolbarSetting" style="display:none;">配置</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh" style="display:none;">刷新</span></li>
+                            <li><span id="Tool_Outport" class="toolbarOutport" >导出</span></li>
+                            <li><span id="Tool_Inport" class="toolbarInport">导入</span></li>
+                        </ul>
+                    </div>
+                    <div class="divDatagridFilter">
+                        <div id="Div_FilterControl"></div>
+                        <div class="divFilterButton">
+                            <input id="Btn_Search" type="button" class="btnSmall btnOrange" value="搜索" />
+                            <input id="Btn_Clean" type="button" class="btnSmall btnGray" value="清空" />
+                        </div>
+                    </div>
+                    <table id="Table_Datagrid" class="tableDatagrid">
+                        <thead id="Table_Head"></thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Div_Form">
+        <form id="form1" method="post" action="SAVE_ORDER" tablename="">
+            <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div id="Div_FormMain"></div>
+            <div class="divFormButton">
+                <div class="divFormButtonLeft"><input id="Btn_SaveNew" type="button" class="btnMiddle btnGreen" value="保存并新建" /></div>
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="Div_Setting">
+        <form id="Form_Setting" method="post" action="">
+            <br />
+            <div class="divFormSetting">
+                <table id="Table_Setting" class="tableSetting"></table>
+            </div>
+            <br />
+            <div class="divFormButton">
+                <div class="divFormButtonRight">
+                    <input id="Btn_SettingSubmit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_SettingCancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="Div_ExcelOutport">
+		<div id="Div_FormExcelOutport"></div>
+		<div class="divFormButton">
+			<div class="divFormButtonRight">
+				<input id="Btn_SubmitExcelOutport" type="button" class="btnMiddle btnOrange" value="确 定" />
+				<input id="Btn_CancelExcelOutport" type="button" class="btnMiddle btnGray" value="取 消" />
+			</div>
+		</div>
+    </div>
+    <div id="Div_ExcelInport">
+		<div id="Div_FormExcelInport">
+			<div id="Div_PlUpload" style="position:absolute; width:410px; height:60px; left:90px; top:64px; overflow-y:scroll;"><input id="Input_PlUpload" class="plupload" type="text" bindcolumn="fileList" isplupload="1" /></div>
+		</div>
+		<div class="divFormButton">
+			<div class="divFormButtonRight">
+				<input id="Btn_SubmitExcelInport" type="button" class="btnMiddle btnOrange" value="确 定" />
+				<input id="Btn_CancelExcelInport" type="button" class="btnMiddle btnGray" value="取 消" />
+			</div>
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd ">
+	<display-name>WEBMASTER V6</display-name>
+	<servlet>
+        <servlet-name>DoServlet</servlet-name>
+        <servlet-class>com.boatsoft.servlet.DoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.boatsoft.servlet.UploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PlUpload</servlet-name>
+        <servlet-class>com.boatsoft.servlet.PlUpload</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileSelecotr</servlet-name>
+        <servlet-class>com.boatsoft.servlet.FileSelector</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DoServlet</servlet-name>
+        <url-pattern>/do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlUpload</servlet-name>
+        <url-pattern>/plupload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileSelecotr</servlet-name>
+        <url-pattern>/fileselector</url-pattern>
+    </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>default.html?website=a</welcome-file>
+	</welcome-file-list>
+	
+</web-app>

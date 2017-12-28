@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_dataTables.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/standard_b.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridM">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1"></span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Add" class="toolbarAdd">新建</span></li>
+                            <li><span id="Tool_Edit" class="toolbarEdit">修改</span></li>
+                            <li><span id="Tool_Delete" class="toolbarDelete">删除</span></li>
+                            <li><span id="Tool_Stop" class="toolbarStop">停用</span></li>
+                            <li><span id="Tool_Remove" class="toolbarRemove">启用</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh">刷新</span></li>
+                        </ul>
+                    </div>
+                    <div class="divDatagridFilter">
+                        <div id="Div_FilterControl">
+                            <label id="Filter_Code">编码:</label><input type="text" class="filterText" fieldname="code" style="width:140px; height:21px; left:44px;" />
+                            <label id="Filter_Name" class="labelFilter" style="left:220px; top:0;">名称:</label><input type="text" class="filterText" fieldname="name" style="width:140px; height:21px; left:264px;" />
+                        </div>
+                        <div class="divFilterButton" style="left:460px;">
+                            <input id="Btn_Search" type="button" class="btnSmall btnOrange" value="搜索" />
+                            <input id="Btn_Clean" type="button" class="btnSmall btnGray" value="清空" />
+                        </div>
+                    </div>
+                    <table class="tableDatagrid">
+                        <thead>
+                            <tr>
+                                <th class="unsortable" style="width:20px;"><input id="Checkbox_All" type="checkbox" /></th>
+                                <th id="Th_Code">编码</th>
+                                <th id="Th_Name">名称</th>
+                                <th id="Th_Stop" class="unsortable" style="width:28px;">停用</th>
+                                <th id="Th_Control" class="unsortable" style="width:28px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Div_Form" class="divFormS">
+        <form id="form1" method="post" action="" tablename="">
+            <br /><br />
+            <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div class="divFormRow"><label id="Label_Code">编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label><input type="text" class="text1" data-validation="required" bindcolumn="code" /></div>
+            <div class="divFormRow"><label id="Label_Name">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</label><input type="text" class="text1" bindcolumn="name" /></div>
+            <br /><br />
+            <div class="divFormButton">
+                <div class="divFormButtonLeft"><input id="Btn_SaveNew" type="button" class="btnMiddle btnGreen" value="保存并新建" /></div>
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

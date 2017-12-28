@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_combobox.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_dataTables.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_combobox.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/sys_user.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridM">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">操作员列表</span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Add" class="toolbarAdd">新建</span></li>
+                            <li><span id="Tool_Edit" class="toolbarEdit">修改</span></li>
+                            <li><span id="Tool_Delete" class="toolbarDelete">删除</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh">刷新</span></li>
+                        </ul>
+                    </div>
+                    <div class="divDatagridFilter">
+                        <div id="Div_FilterControl" style="height:21px;">
+                            <label class="label0" style="width: 60px; height: 21px; left: 0px; top: 0px; ">用户名</label><input id="TextFilter_Username" type="text" class="text0 filterText" fieldname="username" style="width: 140px; height: 21px; left: 65px; top: 0px; " />
+                            <label class="label0" style="width: 60px; height: 21px; left: 219px; top: 0px; ">真实姓名</label><input id="TextFilter_Realname" type="text" class="text0 filterText" fieldname="realname" style="width: 140px; height: 21px; left: 284px; top: 0px; " />
+                        </div>
+                        <div class="divFilterButton" style="left:468px;">
+                            <input id="Btn_Search" type="button" class="btnSmall btnOrange" value="搜索" />
+                            <input id="Btn_Clean" type="button" class="btnSmall btnGray" value="清空" />
+                        </div>
+                    </div>
+                    <table id="Table_Datagrid" class="tableDatagrid">
+                        <thead>
+                            <tr>
+                                <th class="unsortable" style="width:20px;"><input id="Checkbox_All" type="checkbox" /></th>
+                                <th>用户名</th>
+                                <th>昵称</th>
+                                <th>真实姓名</th>
+                                <th class="unsortable" style="width:28px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Div_Form" class="divForm">
+        <form id="form1" method="post" action="" tablename="t_sys_user">
+            <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div id="Div_FormMain">
+                <ul>
+                    <li><a href="#Tabs_基本信息">基本信息</a></li>
+                    <li><a href="#Tabs_角色设置">角色设置</a></li>
+                </ul>
+                <div id="Tabs_基本信息" class="divTabsForm" style="height: 458px;">
+                    <label class="label0" style="left: 35px; top: 30px;">用户名</label><input type="text" class="text0" bindcolumn="username" style="left: 90px; top: 30px; width: 121px; height: 21px; " />
+                    <label class="label0" style="left: 243px; top: 30px;">昵称</label><input type="text" class="text0" bindcolumn="nickname" style="left: 301px; top: 30px; width: 121px; height: 21px; " />
+                    <label class="label0" style="left: 35px; top: 60px;">真实姓名</label><input type="text" class="text0" bindcolumn="realname" style="left: 90px; top: 60px; width: 121px; height: 21px; " />
+                    <label class="label0" style="left: 243px; top: 60px; ">登录密码</label><input id="Text_Pwd" type="password" class="text0" style="left: 301px; top: 60px; width: 121px; height: 21px; " readonly="readonly" placeholder="原始密码123" /><input id="Checkbox_isResetPwd" type="checkbox" class="checkbox0" style="left: 440px; top: 60px; width: 16px; height: 16px; " /><label class="label0" style="left: 464px; top: 60px; " for="Checkbox_isResetPwd">重置密码</label>
+                    <label class="label0" style="left: 35px; top: 90px; ">配置</label><input id="Checkbox_isSystem" type="checkbox" class="checkbox0" bindcolumn="isSystem" style="left: 86px; top: 90px; width: 16px; height: 16px; " /><label class="label0" style="left: 110px; top: 90px; " for="Checkbox_isSystem">系统管理员</label>
+                </div>
+                <div id="Tabs_角色设置" class="divTabsForm" style="height:458px;">
+                    <div class="divDatagridBody">
+                        <div class="divDatagridToolbar" style="border-top:solid 2px #444444;">
+                            <ul>
+                                <li><span id="Tool_Add_Child" class="toolbarAdd">新建</span></li>
+                                <li><span id="Tool_Edit_Child" class="toolbarEdit">修改</span></li>
+                                <li><span id="Tool_Delete_Child" class="toolbarDelete">删除</span></li>
+                            </ul>
+                        </div>
+                        <table id="Table_Datagrid_Child" class="tableDatagrid">
+                            <thead>
+                                <tr>
+                                    <th class="unsortable" style="width:20px;"><input id="Checkbox_All_Child" type="checkbox" /></th>
+                                    <th>编码</th>
+                                    <th>名称</th>
+                                    <th class="unsortable" style="width:30px;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Table_Body_Child"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="divFormButton">
+                <div class="divFormButtonLeft"><input id="Btn_SaveNew" type="button" class="btnMiddle btnGreen" value="保存并新建" /></div>
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="Div_Form_Child" class="divForm">
+        <form id="form2" method="post" action="" tablename="t_sys_user_role">
+            <input id="Hidden_Id_Child" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div id="Div_FormControl" style="height: 100px;">
+                <label class="label0" style="left: 35px; top: 30px;">选择角色</label><select id="Select_Role" class="text0" bindcolumn="roleId" style="left: 90px; top: 30px; width: 121px; height: 21px; "></select>
+            </div>
+            <div class="divFormButton">
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit_Child" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel_Child" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

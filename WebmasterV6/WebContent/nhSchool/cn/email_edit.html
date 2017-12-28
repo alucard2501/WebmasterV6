@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../common/css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_colorbox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_zyUpload.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_bsImgSelector.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_bsTextboxMenu.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_cleditor.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_plupload_queue.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+
+    <script type="text/javascript" src="../../common/js/jquery.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_colorbox.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_dataTables.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_zyFile.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_zyUpload.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsImgSelector.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_cleditor.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsTextboxAdvance.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsTextboxMenu.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_plupload.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_plupload_queue.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsPlupload.js"></script>
+
+    <script type="text/javascript" src="../../common/js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/header.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/my_function.js"></script>
+    <script type="text/javascript" src="../js/pages/email_edit.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridM">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">发邮件</span>
+                </div>
+                <div id="Div_Form" class="divForm">
+                    <form id="form1" method="post" action="" tablename="">
+                        <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+                        <div id="Div_FormControl">
+                            <label id="Label_To" class="label0" style="left:35px; top:30px;">收件人</label><input id="Text_sysUserIdsReceive" type="text" class="text0 textboxMenu" data-validation="required" bindcolumn="sysUserIdsReceive" style="left:90px; top:30px;" />
+                            <label id="Label_Title" class="label0" style="left:35px; top:60px;">主题</label><input type="text" class="text0" data-validation="required" bindcolumn="title" style="left:90px; top:60px;" />
+                            <label id="Label_Content" class="label0" style="left:35px; top:90px;">正文</label><textarea id="Textarea_Conttent" class="text0" bindcolumn="content" iseditor="1"></textarea>
+                            <div style="position:absolute; width:662px; height:90px; left:90px; top:400px; overflow-y:scroll;"><input class="plupload" type="text" bindcolumn="fileList" isplupload="1" /></div>
+                        </div>
+                        <div class="divFormButton">
+                            <div class="divFormButtonRight">
+                                <input id="Checkbox_AutoSend" type="checkbox" class="checkboxEmailEdit" /><label id="Label_AutoSend" for="Checkbox_AutoSend" class="labelEmailEdit">上传完自动发送</label>
+                                <input id="Btn_SaveDrafts" type="button" class="btnMiddle btnGray" value="存草稿" />
+                                <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="发 送" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

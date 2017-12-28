@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../common/css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/jquery_bsTextboxMenu.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+	<style>
+	  #feedback { font-size: 1.4em; }
+	  .selectable .ui-selecting { background: #FECA40; }
+	  .selectable .ui-selected { background: #F39814; color: white; }
+	  .selectable { list-style-type: none; margin: 0; padding: 0;position:absolute;}
+	  .selectable li { margin: 3px; padding: 0.4em; width:120px; height:18px;}
+	</style>
+    <script type="text/javascript" src="../../common/js/jquery.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsButtonMenu.js"></script>
+
+    <script type="text/javascript" src="../../common/js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/header.js"></script>
+    <script type="text/javascript" src="../../common/js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/my_function.js"></script>
+    <script type="text/javascript" src="../js/pages/department_custom.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridM">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">发邮件</span>
+                </div>
+                <div id="Div_Form" class="divForm">
+                	<input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+                    <div id="Div_FormControl">
+                            <label class="label0" style="left:35px; top:30px;">自定义分组</label>
+                            <button id="Btn_AddDepartCustom" class="ui-button ui-widget ui-corner-all" style="position:absolute;left:135px; top:30px;">
+								<span class="ui-icon ui-icon-plus"></span>
+							</button><br /><br />
+                            <ol id="selectable_department" class="selectable" style="left:35px;top:60px;">
+							  <li class="ui-widget-content">Item 1<div class="ui-icon ui-icon-close icon_delete"></div></li>
+							  <li class="ui-widget-content">Item 2</li>
+							  <li class="ui-widget-content">Item 3</li>
+							  <li class="ui-widget-content">Item 4</li>
+							  <li class="ui-widget-content">Item 5</li>
+							  <li class="ui-widget-content">Item 6</li>
+							  <li class="ui-widget-content">Item 7</li>
+							</ol>
+                            <label class="label0" style="left:255px; top:30px;">联系人</label>
+                            <button id="Btn_AddUsers" class="ui-button ui-widget ui-corner-all" style="position:absolute;left:355px; top:30px;">
+								<span class="ui-icon ui-icon-plus"></span>
+							</button><br /><br />
+                            <ol id="selectable_user" class="selectable" style="left:255px;top:60px;">
+
+							</ol>
+                        </div>
+                    <div class="divFormButton">
+						<div class="divFormButtonRight">
+							<input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="保 存" />
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

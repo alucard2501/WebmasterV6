@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_colorbox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_combobox.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_colorbox.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_dataTables.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_combobox.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/sys_images.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridL">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">图片列表</span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Add" class="toolbarAdd">新建</span></li>
+                            <li><span id="Tool_Edit" class="toolbarEdit">修改</span></li>
+                            <li><span id="Tool_Delete" class="toolbarDelete">删除</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh">刷新</span></li>
+                        </ul>
+                    </div>
+                    <div class="divDatagridFilter">
+                        <div id="Div_FilterControl" style="height:21px;">
+                            <label class="label0" style="width: 60px; height: 21px; left: 0px; top: 0px; ">图片分类</label><select id="SelectFilter_ImagesType" class="text0 filterText" fieldname="imagesTypeId" style="width: 140px; height: 21px; left: 65px; top: 0px; "></select>
+                            <label class="label0" style="width: 60px; height: 21px; left: 219px; top: 0px; ">名称</label><input id="TextFilter_Name" type="text" class="text0 filterText" fieldname="name" style="width: 140px; height: 21px; left: 284px; top: 0px; " />
+                        </div>
+                        <div class="divFilterButton" style="left:468px;">
+                            <input id="Btn_Search" type="button" class="btnSmall btnOrange" value="搜索" />
+                            <input id="Btn_Clean" type="button" class="btnSmall btnGray" value="清空" />
+                        </div>
+                    </div>
+                    <table class="tableDatagrid">
+                        <thead>
+                            <tr>
+                                <th class="unsortable" style="width:20px;"><input id="Checkbox_All" type="checkbox" /></th>
+                                <th>ID</th>
+                                <th>相册分类</th>
+                                <th>大图</th>
+                                <th>小图</th>
+                                <th>名称</th>
+                                <th>描述</th>
+                                <th class="unsortable" style="width:28px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Div_Form" class="divForm">
+        <form id="form1" method="post" action="" tablename="t_sys_images">
+            <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div id="Div_FormControl" style="height:230px;">
+                <label class="label0" style="left: 35px; top: 30px;">图片分类</label><select id="Select_ImagesType" class="text0" bindcolumn="imagesTypeId" isclean="0" style="left: 90px; top: 30px; width: 121px; height: 21px;"></select>
+                <label class="label0" style="left: 243px; top: 30px;">名称</label><input type="text" class="text0" bindcolumn="name" style="left: 301px; top: 30px; width: 121px; height: 21px; " />
+                <label class="label0" style="left: 35px; top: 60px;">图片描述</label><input type="text" class="text0" bindcolumn="alt" style="left: 90px; top: 60px; width: 332px; height: 21px; " />
+                <label class="label0" style="left: 35px; top: 90px;">大图路径</label><input type="text" class="text0" bindcolumn="srcL" style="left: 90px; top: 90px; width: 332px; height: 21px; " />
+                <label class="label0" style="left: 35px; top: 120px; ">小图路径</label><input type="text" class="text0" bindcolumn="srcS" style="left: 90px; top: 120px; width: 332px; height: 21px;" />
+                <label class="label0" style="left: 35px; top: 150px;">大图宽度</label><input type="text" class="text0" bindcolumn="widthL" notshowzero="1" style="left: 90px; top: 150px; width: 121px; height: 21px; " />
+                <label class="label0" style="left: 243px; top: 150px;">大图高度</label><input type="text" class="text0" bindcolumn="heightL" notshowzero="1" style="left: 301px; top: 150px; width: 121px; height: 21px; " />
+                <label class="label0" style="left: 35px; top: 180px;">小图宽度</label><input type="text" class="text0" bindcolumn="widthS" notshowzero="1" style="left: 90px; top: 180px; width: 121px; height: 21px; " />
+                <label class="label0" style="left: 243px; top: 180px;">小图高度</label><input type="text" class="text0" bindcolumn="heightS" notshowzero="1" style="left: 301px; top: 180px; width: 121px; height: 21px; " />
+            </div>
+            <div class="divFormButton">
+                <div class="divFormButtonLeft"><input id="Btn_SaveNew" type="button" class="btnMiddle btnGreen" value="保存并新建" /></div>
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

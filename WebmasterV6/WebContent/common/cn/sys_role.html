@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_dataTables.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/sys_role.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridM">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">角色列表</span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Add" class="toolbarAdd">新建</span></li>
+                            <li><span id="Tool_Edit" class="toolbarEdit">修改</span></li>
+                            <li><span id="Tool_Delete" class="toolbarDelete">删除</span></li>
+                            <li><span id="Tool_Stop" class="toolbarStop">停用</span></li>
+                            <li><span id="Tool_Remove" class="toolbarRemove">启用</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh">刷新</span></li>
+                        </ul>
+                    </div>
+                    <div class="divDatagridFilter">
+                        <div id="Div_FilterControl" style="height:21px;">
+                            <label class="label0" style="width: 60px; height: 21px; left: 0px; top: 0px; ">编码</label><input id="TextFilter_Code" type="text" class="text0 filterText" fieldname="code" style="width: 140px; height: 21px; left: 65px; top: 0px; " />
+                            <label class="label0" style="width: 60px; height: 21px; left: 219px; top: 0px; ">名称</label><input id="TextFilter_Name" type="text" class="text0 filterText" fieldname="name" style="width: 140px; height: 21px; left: 284px; top: 0px; " />
+                        </div>
+                        <div class="divFilterButton" style="left:468px;">
+                            <input id="Btn_Search" type="button" class="btnSmall btnOrange" value="搜索" />
+                            <input id="Btn_Clean" type="button" class="btnSmall btnGray" value="清空" />
+                        </div>
+                    </div>
+                    <table class="tableDatagrid">
+                        <thead>
+                            <tr>
+                                <th class="unsortable" style="width:20px;"><input id="Checkbox_All" type="checkbox" /></th>
+                                <th>编码</th>
+                                <th>名称</th>
+                                <th>备注</th>
+                                <th>停用</th>
+                                <th class="unsortable" style="width:28px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Div_Form" class="divForm">
+        <form id="form1" method="post" action="" tablename="t_sys_role">
+            <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div id="Div_FormMain">
+                <ul>
+                    <li><a href="#Tabs_1">基本信息</a></li>
+                    <li><a href="#Tabs_2">权限设置</a></li>
+                </ul>
+                <div id="Tabs_1" class="divTabsForm" style="height: 458px;">
+                    <label class="label0" style="left: 35px; top: 30px;">编码</label><input type="text" class="text0" bindcolumn="code" style="left: 90px; top: 30px; width: 121px; height: 21px; " />
+                    <label class="label0" style="left: 243px; top: 30px;">名称</label><input type="text" class="text0" bindcolumn="name" style="left: 301px; top: 30px; width: 121px; height: 21px; " />
+                    <label class="label0" style="left: 35px; top: 60px;">备注</label><input type="text" class="text0" bindcolumn="remark" style="left: 90px; top: 60px; width: 332px; height: 21px; " />
+                </div>
+                <div id="Tabs_2" class="divTabsForm" style="width:92%; height:458px;">
+                    <div class="divTableRoleRightBg">
+                        <table class="tableRoleRight">
+                            <thead>
+                                <tr class="trRoleRightHeader">
+                                    <th class="tdRoleRight1">菜单</th>
+                                    <th>浏览</th>
+                                    <th>新建</th>
+                                    <th>编辑</th>
+                                    <th>删除</th>
+                                    <th>停用</th>
+                                    <th>启用</th>
+                                    <th>配置</th>
+                                    <th>打印</th>
+                                    <th>导出</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Tbody_RoleRight">
+                                <tr class="trRoleRight1">
+                                    <td class="tdRoleRight1">基础资料</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="spanRoleRight spanRoleRight1"></span></td>
+                                    <td><span class="spanRoleRight spanRoleRight2"></span></td>
+                                    <td><span class="spanRoleRight spanRoleRight2"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdRoleRight1">邮件管理</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="divFormButton">
+                <div class="divFormButtonLeft"><input id="Btn_SaveNew" type="button" class="btnMiddle btnGreen" value="保存并新建" /></div>
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+           </div>
+</form>
+    </div>
+</body>
+</html>

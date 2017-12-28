@@ -1,0 +1,167 @@
+
+#main{ width:1057px; min-height:595px; margin-left:206px; padding-top:100px; padding-bottom:30px; overflow:hidden;}
+
+.toolbarAdd{ background-image:url(../images/icon/add.png);}
+.toolbarEdit{ background-image:url(../images/icon/edit.png);}
+.toolbarDelete{ background-image:url(../images/icon/delete.png);}
+.toolbarUnDelete{ background-image:url(../images/icon/accept.png);}
+.toolbarStop{ background-image:url(../images/icon/stop.png);}
+.toolbarRemove{ background-image:url(../images/icon/play.png);}
+.toolbarSearch{ background-image:url(../images/icon/find.png);}
+.toolbarSetting{ background-image:url(../images/icon/hammer_screwdriver.png);}
+.toolbarRefresh{ background-image:url(../images/icon/refresh.png);}
+.toolbarBack{ background-image:url(../images/icon/arrow_left.png);}
+.toolbarNext{ background-image:url(../images/icon/arrow_right.png);}
+.toolbarRead{ background-image:url(../images/icon/email_open.png);}
+.toolbarCopy{ background-image:url(../images/icon/page_copy.png);}
+.toolbarCheck{ background-image:url(../images/icon/accept.png);}
+.toolbarUnCheck{ background-image:url(../images/icon/cross_shield_2.png);}
+
+.btnSmall{ padding:3px 6px; outline:none; cursor:pointer; border-radius:3px; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4); 
+           box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.15);}
+.btnMiddle{ min-width:65px; padding:6px 9px; outline:none; cursor:pointer; border-radius:3px; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4); 
+           box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.15);}
+.btnOrange{ background-color:#de7616; color:#ffffff; border:1px solid #9f570a; background-image:linear-gradient(#e7852b,#de7616);}
+.btnGreen{ background-color:#96c742; color:#ffffff; border:1px solid #507E0C; background-image:linear-gradient(#addf58,#96c742);}
+.btnBlack{ background-color:#464646; color:#ffffff; border:1px solid #000000; background-image:linear-gradient(#5a5858,#464646);}
+.btnGray{ background-color:#e0e0e0; color:#666666; text-shadow:none; border: 1px solid #ababab; background-image:linear-gradient(#e8e5e5,#e0e0e0);}
+
+
+.tipsError{ margin:2px 10px 0 0; padding-left:18px; background:url("../images/ico_error.png") no-repeat center left; color:#666666; float:right;}
+
+
+/*µÇÂ¼ - login*/
+.divLogin{ width:300px; margin:0 auto; margin-top:12%; padding:20px 15px 25px 15px; background:#eaeaea url(../images/bg_login.png); color:#ffffff;
+           overflow:hidden; border-radius:4px;}
+.spanLogin1{ width:100%; padding-bottom:10px; background:url(../images/bg_login_title.png) repeat-x bottom left; font:normal 1.5em Arial; text-align:center; display:block;}
+.spanLogin2{ color:#f8b801;}
+.spanLogin3{ width:100%; margin-top:5px; margin-bottom:35px; color:#929292; text-align:center; display:block;}
+
+.divLoginForm{ width:100%; height:35px; margin-bottom:20px; background:#ffffff; overflow:hidden; border-radius:4px;}
+.spanLoginT1, .spanLoginT2{ width:13%; height:35px; border-right:solid 1px #dddddd; display:block; float:left;}
+.spanLoginT1{ background:#eeeeee url(../images/ico_username.png) no-repeat center center;}
+.spanLoginT2{ background:#eeeeee url(../images/ico_password.png) no-repeat center center;}
+.textLogin1{ width:82%; height:35px; padding-left:5px; border:0; color:#453832; float:left;}
+.btnLogin{ width:100%; height:35px; background:#f8b801; font:normal 1.1em Î¢ÈíÑÅºÚ; text-align:center; line-height:35px; display:block; border-radius:4px; cursor:pointer;}
+.btnLogin:hover{ background:#f4a100;}
+
+.spanLoginLine{ width:100%; height:20px; background:url(../images/bg_login_title.png) repeat-x bottom left; display:block;}
+.divLoginTips{ margin-top:1em; color:#cc0000; text-align:center;}
+
+
+/*»ù±¾ÁÐ±í*/
+.divDatagrid{ margin-left:25px;}
+.divDatagridXS{ width:35%;}
+.divDatagridS{ width:50%;}
+.divDatagridM{ width:76%;}
+.divDatagridL{ width:96%;}
+.divDatagridCustom{ min-width:50%; max-width:96%;}
+
+.divDatagridHeader{ height:25px; padding:12px; background:url(../images/bg_datagrid_header.png) repeat-x top left; font:bold 1.1em Î¢ÈíÑÅºÚ; overflow:hidden; border-radius:4px;}
+.divDatagridHeader span{ padding-left:40px; background-position:8px center; background-repeat:no-repeat; color:#f8b801; text-shadow:0 0 6px rgba(248, 184, 1, 0.5); cursor:default; line-height:25px;}
+.spanDatagridHeader1{ background-image:url(../images/icon/list.png);}
+
+.divDatagridBody{ margin:0 2px; border:1px solid #bcbcbc; border-top:0; background-color:#444444; box-shadow:0px 3px 3px -2px rgba(0, 0, 0, 0.15); overflow:hidden;}
+.divDatagridToolbar{ background:#f5f5f5 url(../images/bg_datagrid_toolbar.png) repeat-x; border-bottom:1px solid #dddddd; overflow:hidden;}
+.divDatagridToolbar ul li{ border-right:1px solid #d0d0d0; display:block; float: left;}
+.divDatagridToolbar ul li span{ padding:8px 12px; padding-left:32px; background-position:12px center; background-repeat:no-repeat; color:#666666; text-decoration:none;
+                             display:block; cursor:pointer; box-shadow:inset 1px 0px 0px rgba(255, 255, 255, 0.75), inset 0px 1px 0px #ffffff;}
+
+
+
+.divDatagridFilter{ padding:8px; background-color:#cccccc; border-bottom:1px solid #aaaaaa; overflow:hidden; position:relative;}
+.divDatagridFilter label{ text-align:right;}
+.divDatagridFilter2{ padding:12px 20px; background-color:#cccccc; border-bottom:1px solid #aaaaaa; overflow:hidden; position:relative;}
+.divDatagridFilter2 label{ text-align:right; line-height:22px;}
+#Div_FilterControl{ width:100%; position:relative;}
+.filterText{ border:1px solid #c5c5c5; padding:0px 7px; color:#323232; margin:0; background:#ffffff; border-radius:2px; outline:none;
+             box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute;}
+.filterText2{ width:245px; height:22px; border:1px solid #c5c5c5; padding:0px 7px; color:#323232; margin:0 0 0 2px; background:#ffffff; border-radius:2px; outline:none;
+             box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute;}
+.labelFilter{ display:block; position:absolute;}
+.divFilterButton{ top:8px; overflow:hidden; position:absolute;}
+
+.tableDatagrid{ width:100%;}
+.tableDatagrid thead tr{ background:url(../images/bg_datagrid_table_header.png) repeat-x left bottom #f5f5f5;}
+.tableDatagrid thead tr th{ padding:10px 16px; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; font-weight:normal; vertical-align:top; text-align:left; cursor:default;}
+.tableDatagrid thead tr th:first-child{ border-left:none;}
+.tableDatagrid thead tr th.sorting{ padding-left:30px; background:url(../images/sort.png) no-repeat 12px center; cursor:pointer;}
+.tableDatagrid thead tr th.sorting_desc{ padding-left:30px; background:url(../images/sort_asc.png) no-repeat 12px center; cursor:pointer;}
+.tableDatagrid thead tr th.sorting_asc{ padding-left:30px; background:url(../images/sort_desc.png) no-repeat 12px center; cursor:pointer;}
+.tableDatagrid tbody tr{ background-color:#fafafa;}
+.tableDatagrid tbody tr.odd{ background-color:#f2f2f2;}
+.tableDatagrid tbody tr td{ padding:8px 10px; border-left:dotted 1px #bebebe;}
+.tableDatagrid tbody tr td:first-child{ border-left:none;}
+
+.btnDatagrid{ width:18px; height:18px; background-repeat:no-repeat; background-position:center; float:left; cursor:pointer;}
+
+.divDatagridPage{ margin:10px 8px 10px 0; padding:2px; background:url(../images/bg_datagrid_page.png); color:#ffffff; float: right; border-radius:4px;
+                  box-shadow:0px 1px 0px rgba(255, 255, 255, 0.15), inset 0px 1px 2px rgba(0, 0, 0, 0.5);}
+.btnDatagridPage, .btnDatagridPageC{ height:20px; padding:0 10px; border-right:1px solid rgba(0, 0, 0, 0.5); border-left: 1px solid rgba(255, 255, 255, 0.15); 
+                                           font-size:12px; line-height:20px; text-align: center; display: block; float: left; cursor: pointer; }
+.btnDatagridPage{ background:#444444; box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.15);}
+.btnDatagridPageC{ background:#f8b801; border:none; color:#323232; box-shadow:inset 0px 0px 4px rgba(0, 0, 0, 0.25);}
+.btnDatagridPageFirst{ border-left:0; border-radius:2px 0 0 2px;}
+.btnDatagridPageLast{ border-right:0; border-radius:0 2px 2px 0;}
+.btnDatagridPageDisabled{ color:#666666; cursor:default;}
+
+.imgDatagrid{ max-width:90px; max-height:25px;}
+
+
+/*»ù±¾Â¼Èë´°Ìå*/
+.divFormRow{ padding:12px 24px;}
+.divFormRow label{ width:60px; margin-right:5px; padding-top:5px; padding-bottom:5px; text-align:right; display: block; float:left;}
+.text1{ width:260px; height:28px; border:1px solid #c5c5c5; padding:0 7px; color:#323232; margin:0; background:#ffffff; border-radius:4px; outline:none;
+        box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); line-height:28px;}
+.select1{ width:260px; height:28px; top:0; left:0; border:1px solid #c5c5c5; padding:0 7px; color:#323232; margin:0; background:#ffffff; border-radius:4px; outline:none;
+        box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute;}
+
+.divFormButton{ width:100%; padding:16px 0; background:url(../images/bg_datagrid_page.png); border-top:1px solid #bcbcbc; overflow:hidden;}
+.divFormButtonLeft{ margin-left:24px; float:left;}
+.divFormButtonRight{ margin-right:24px; float:right;}
+
+#Div_FormControl{ width:100%; position:relative; overflow-y:auto;}
+.label0{ padding-top:5px; padding-bottom:5px; font:12px ËÎÌå; line-height:12px; display:block; position:absolute;}
+.text0{ border:1px solid #c5c5c5; padding:0px 7px 0px 7px; color:#323232; margin:0; background:#ffffff; border-radius:2px; outline:none;
+        box-shadow:inset 0px 1px 3px rgba(128, 128, 128, 0.1); position:absolute;}
+.checkbox0{ position:absolute;}
+
+.divFormControlChild{ width:100%; overflow-y:auto; position:relative;}
+.divTabsForm{ width:94.5%; overflow-y:auto; position:relative;}
+
+
+/*ÁÐ±íÅäÖÃ*/
+.divFormSetting{ max-height:400px; overflow-y:scroll;}
+.tableSetting{ width:400px; margin:0 auto;}
+.tableSetting td{ background:#ffffff; border:solid 1px #cccccc; color:#666666; font:normal 0.9em Î¢ÈíÑÅºÚ; line-height:250%; text-align:center; vertical-align:central;}
+.textSetting{ width:98%; height:25px; border:0; color:#323232; font-size:1em;}
+
+
+/*ÐÞ¸ÄÃÜÂë*/
+.divSysPwd{ background-color:#f8f8f8; border:1px solid #bcbcbc; border-top:0; box-shadow:0px 3px 3px -2px rgba(0, 0, 0, 0.15);}
+
+
+/*½ÇÉ«È¨ÏÞÉèÖÃ*/
+.divTableRoleRightBg{ border:1px solid #cccccc; overflow:hidden;}
+.tableRoleRight{ width:100%; background:#fafafa; border-collapse:collapse; border-spacing:2px; border-color:gray; display:table; cursor:default;}
+.trRoleRightHeader{ background: url(../images/bg_datagrid_table_header.png) repeat-x left bottom #f5f5f5;}
+.trRoleRightHeader th{ padding:8px 0; border:1px solid #cccccc; border-top:0; border-right:0; color:#323232; font:normal 0.9em Î¢ÈíÑÅºÚ; text-align:center;}
+.tableRoleRight td{ padding:8px 0; border-left:dotted 1px #bebebe; font:normal 0.9em Î¢ÈíÑÅºÚ; text-align:center; }
+.trRoleRight1{ background:#f2f2f2;}
+.trRoleRightHeader th.tdRoleRight1{ border-left:0;}
+.tableRoleRight td.tdRoleRight1{ border-left:0;}
+.spanRoleRight{ width:16px; height:16px; margin:0 auto; display:block;}
+.spanRoleRight1{ background:url(../images/icon/accept2.png) no-repeat; background-size:16px;}
+.spanRoleRight2{ background:url(../images/icon/delete2.png) no-repeat; background-size:16px;}
+
+
+/*±¨±í*/
+.divTableReportBg{ overflow:auto;}
+.tableReport{ width:100%; background:#fafafa; border-collapse:collapse; border-spacing:2px; border-color:gray; display:table; cursor:default;}
+.trReportHeader{ background: url(../images/bg_datagrid_table_header.png) repeat-x left bottom #f5f5f5;}
+.trReportHeader th{ padding:8px 0; border:1px solid #cccccc; border-top:0; border-right:0; color:#323232; font:normal 0.9em Î¢ÈíÑÅºÚ; text-align:center;}
+.tableReport td{ padding:8px 0; border-left:dotted 1px #bebebe; font-size:0.9em; text-align:center; }
+.trReport1{ background:#f2f2f2;}
+.trReportHeader th.tdReport1{ border-left:0;}
+.tableReport td.tdReport1{ border-left:0;}
+

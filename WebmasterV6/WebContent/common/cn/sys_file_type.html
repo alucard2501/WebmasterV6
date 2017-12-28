@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_dataTables.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/sys_file_type.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridL">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">文件分类列表</span>
+                </div>
+                <div class="divDatagridBody">
+                    <div class="divDatagridToolbar">
+                        <ul>
+                            <li><span id="Tool_Add" class="toolbarAdd">新建</span></li>
+                            <li><span id="Tool_Edit" class="toolbarEdit">修改</span></li>
+                            <li><span id="Tool_Delete" class="toolbarDelete">删除</span></li>
+                            <li><span id="Tool_Refresh" class="toolbarRefresh">刷新</span></li>
+                        </ul>
+                    </div>
+                    <table class="tableDatagrid">
+                        <thead>
+                            <tr>
+                                <th class="unsortable" style="width:20px;"><input id="Checkbox_All" type="checkbox" /></th>
+                                <th>ID</th>
+                                <th>名称</th>
+                                <th>描述</th>
+                                <th>上传文件夹</th>
+                                <th class="unsortable" style="width:28px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table_Body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Div_Form" class="divForm">
+        <form id="form1" method="post" action="" tablename="t_sys_images_type">
+            <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+            <div id="Div_FormControl" style="height:145px;">
+                <label class="label0" style="left: 35px; top: 30px;">名称</label><input type="text" class="text0" bindcolumn="name" data-validation="required" style="left: 90px; top: 30px; width: 332px; height:21px;" />
+                <label class="label0" style="left: 35px; top: 60px;">描述</label><input type="text" class="text0" bindcolumn="remark" style="left: 90px; top: 60px; width: 332px; height: 21px;" />
+                <label class="label0" style="left: 35px; top: 90px;">上传路径</label><input type="text" class="text0" bindcolumn="uploadPath" style="left: 90px; top: 90px; width: 332px; height: 21px;" />
+            </div>
+            <div class="divFormButton">
+                <div class="divFormButtonLeft"><input id="Btn_SaveNew" type="button" class="btnMiddle btnGreen" value="保存并新建" /></div>
+                <div class="divFormButtonRight">
+                    <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                    <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

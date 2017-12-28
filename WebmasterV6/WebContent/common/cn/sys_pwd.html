@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/sys_pwd.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridXS">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">修改密码</span>
+                </div>
+                <div id="Div_Form" class="divForm divSysPwd">
+                    <form id="form1" method="post" action="" tablename="t_sys_images">
+                        <input id="Hidden_Id" type="hidden" value="0" bindcolumn="id" defaultvalue="0" />
+                        <div id="Div_FormControl" style="height:150px;">
+                            <label class="label0" style="left: 35px; top: 30px;">原密码</label><input id="Text_PwdOld" type="password" class="text0" bindcolumn="name" style="left: 90px; top: 30px; width: 210px; height: 21px; " data-validation="required" />
+                            <label class="label0" style="left: 35px; top: 60px;">新密码</label><input id="Text_Pwd1" type="password" class="text0" bindcolumn="alt" style="left: 90px; top: 60px; width: 210px; height: 21px; " data-validation="required" />
+                            <label class="label0" style="left: 35px; top: 90px;">确认密码</label><input id="Text_Pwd2" type="password" class="text0" bindcolumn="srcL" style="left: 90px; top: 90px; width: 210px; height: 21px; " data-validation="required" />
+                        </div>
+                        <div class="divFormButton">
+                            <div class="divFormButtonRight">
+                                <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确 定" />
+                                <input id="Btn_Cancel" type="button" class="btnMiddle btnGray" value="取 消" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

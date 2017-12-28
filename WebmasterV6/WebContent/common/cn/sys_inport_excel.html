@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/baseCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/subpageCn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_combobox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery_plupload_queue.css" media="screen" />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery_ui.js"></script>
+    <script type="text/javascript" src="../js/controls/jquery_combobox.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_plupload.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_plupload_queue.js"></script>
+    <script type="text/javascript" src="../../common/js/controls/jquery_bsPlupload.js"></script>
+
+    <script type="text/javascript" src="../js/sys_config_string.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_manager.js"></script>
+    <script type="text/javascript" src="../js/jquery_form_validator.js"></script>
+    <script type="text/javascript" src="../js/pages/header.js"></script>
+    <script type="text/javascript" src="../js/pages/menu.js"></script>
+    <script type="text/javascript" src="../js/pages/sys_inport_excel.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="left"></div>
+        <div id="main">
+            <div class="divDatagrid divDatagridS">
+                <div class="divDatagridHeader">
+                    <span id="Span_DatagridHeader" class="spanDatagridHeader1">EXCEL导入数据</span>
+                </div>
+                <div id="Div_Form" class="divForm divSysPwd">
+                        <div id="Div_FormControl" style="height:150px;">
+                            <label class="label0" style="left: 35px; top: 30px;">选择内容</label><select id="Select_Excel" class="text0" fieldname="parentId" style="left: 90px; top: 30px; width: 210px; height: 21px;"></select>&nbsp;
+                            <a id="ADownload" href="" style="position: absolute;left: 320px;top: 30px;">下载模板</a>
+                            <label class="label0" style="left: 35px; top: 66px;">上传文件</label><div style="position:absolute; width:410px; height:60px; left:90px; top:64px; overflow-y:scroll;"><input id="Input_PlUpload" class="plupload" type="text" bindcolumn="fileList" isplupload="1" /></div>
+                        </div>
+                        <div class="divFormButton">
+                            <div class="divFormButtonRight">
+                                <input id="Btn_Submit" type="button" class="btnMiddle btnOrange" value="确定导入" />
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
