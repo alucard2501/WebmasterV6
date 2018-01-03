@@ -357,7 +357,7 @@
                 } else {    //多选
                     var imgs = "";
                     for (var i = 0; i < _dialog._arr_img_choose.length; i++) {
-                        imgs = imgs + '<img src="' + _dialog._arr_img_choose[i].srcL + '" />';
+                        imgs = imgs + '<img src="' + _dialog._arr_img_choose[i].srcL + '" style="width:100%" />';
                     }
                     _dialog._para.onSubmit(imgs, _dialog._para.element);
                 }
